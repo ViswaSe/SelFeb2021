@@ -1,0 +1,102 @@
+****************************************
+Day1 week1 learnings: 
+****************************************
+
+class = class is the container which has all the properties of the object 
+class contains methods and the variables inside it 
+class follows the pascal notations syntax which is starts with upper case and followed with each word of upper case
+
+eg of few class names are : Selenium, SeleniumLearning, MySeleniumLearning
+
+
+methods = method is basically an action/verification of the object
+method follows the camel case syntax which is starts with lower cases and followed with all the upper case words in the method name. 
+
+eg of few method name : driveCar, makeCall, takePhoto, sendSms() 
+
+syntax of method would be: 
+//access_specifiers return_type methodname(arguments)
+
+public void driveCar()
+{
+}
+
+public void makeCall(long num1)
+{
+}
+
+
+****************************************
+Maven project creation pattern
+****************************************
+
+Project - artifactId (Projectname should be in pascal notations), group id (module follows small characters) and version 
+	=> Package  (should be in smaller case) 
+		=> class  (should be in pascal notations) 
+			=> methods and variables inside the classes.  (both should follow camel case) 
+
+
+
+why main method is required in java?
+
+=> JVM internally calls the main method first whenever we execute the java program from the editor (eclipse) and from main method only we can execute the other methods
+with the help of creating the object for the class and accessing it. This would be the one of the main reason of calling java as Object oriented programming language. 
+
+
+
+****************************************
+Create an object for the class in java
+****************************************
+
+// classname objectname = new classname();
+
+Mobile obj = new Mobile(); //obj is the object for the class mobile which helps to access the properties of the mobile class.
+
+
+****************************************
+Variables & Data types in java
+****************************************
+
+Variable is the name of the memory space which holds the data in it. 
+
+Global variable - entire class level variable you can use it everywhere with the help of the object. 
+Local variable - you can use it only inside the respective method. 
+
+
+for every variable you have the respective type in java which is data types. 
+
+Data types ->
+
+=> 1. Primitive data type  - byte,short,int,long, float,double, char,boolean
+=> 2. Non Primitive data type - class, String and Array in java
+
+
+
+****************************************
+Operators in java
+****************************************
+1. Arithmetic operators 
+	+,-,/,*,%
+2. Relational operators
+	<,>,<=,>=,!=,==
+3. Assignment operator
+	=
+4. Logical operator
+	&&, !!
+
+
+****************************************
+Control statements in java
+****************************************
+
+1. Conditional statements 	=> if,if-else, if-elseif-else,switch
+2. Looping statements 		=> for, while, do-while,foreach
+3. Jumping statements		=> break,continue,return
+
+****************************************
+//syntax for loop : 
+****************************************
+for(initialization;condition;increment/decrement) 
+
+eg. for(int i=0;i<100;i++) //It will validate from 0 to 99 
+
