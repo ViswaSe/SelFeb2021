@@ -1,0 +1,128 @@
+****************************************
+Day 1 Assignments: 
+****************************************
+
+1) Find out the given number is prime or not?
+2) Print the fibbonacci series with & without using the temp variable? 0,1,1,2,3,5,8,13,21,34....
+3) Find out the factorial of the given number?
+
+
+****************************************
+Day2 week1 learnings: 
+****************************************
+
+while loop: 
+while loop is mainly used to repeat the statement of code unless the condition matches. 
+
+for loop: If we know the limit we can go for loop, if not use while loop until the condition satisified. 
+
+do while loop: This is same as like while loop but it will print only once even before the condition has been verified. 
+
+while loop syntax: 
+while(condition)
+{
+	//block of code
+}
+
+do-while syntax: 
+do { 
+	//block of code
+}while(condition);
+
+
+****************************************
+Remaining control statements: 
+****************************************
+
+continue - continue is used to terminate the current iteration and proceed with the next iteration of the loop. 
+break - break is to simply terminate the loop whenever the code reaches the break statement.
+
+Try out the armstrong number logic using the above topics.
+
+
+****************************************
+methods calling:
+****************************************
+
+By creating an object,
+
+1) you can call the method from the same class
+2) you can call the method from the different class in the same package
+3) you can call the method from the different class in the different package with the help of import statement. 
+
+
+****************************************
+Arguments and return statement:
+****************************************
+Argument is the method parameter which can take the value from the method calling (i.e) at the time of object creation and calling the respective method. 
+A method can return any value at the end of the method which helps to pass the value back to the method calling in java. 
+
+
+a sample eg. code for return statementt in java: 
+
+public int add(int num1,int num2,int num3)
+{
+		return num1+num2+num3; // This will return the sum of the 3 integer value which is passed in the arguments.
+}
+
+public int sub(int num1,int num2)
+{
+	return num1-num2;
+}
+public double mul(double num1,double num2)
+{
+	return num1*num2;
+}
+	
+public float div(float num1,float num2)
+{
+	return num1/num2;
+}
+
+Inside main() during the time of method calling, declare as below: 
+
+sum=cal.add(5, 10, 15);
+sub=cal.sub(20, 10);
+mul=cal.mul(10.3, 5.2);
+div=cal.div(7, 2);
+
+****************************************
+Arrays in java:
+****************************************
+
+Array is the collection of same data type elements based on the size declared for it. 
+
+2 ways to declare the arrays in java: 
+1) int[] arr = new int[5]; // This is the array declaration with size 5. 
+2) int[] arr = {10,20,3,5,6,7,5}; // This is having 7 elements inside the array hence it will consider the array size as 7.
+
+Limitations in array: 
+1) Array size is always fixed, you can't change the size (increase/decrease) of the array at runtime. 
+2) you can't store the multiple data type elements in a single array.
+
+Methods and properties in the array: 
+1) arr.length => will tells you the array size.
+2) arr.sort(); => sort the array elements in the ascending order. 
+
+To get the first index in array:
+****************************************
+System.out.println(arr[0]);
+		
+To get the last index in array:
+****************************************
+System.out.println(arr[arr.length-1]);
+
+for each loop syntax: 
+
+for(datatype var-name: arrayname)
+{
+	Sysout(var-name); //This to print each value in the array.
+}
+
+****************************************
+Day 2 Assignments: 
+****************************************
+
+1) Print the duplicate elements in the array?
+2) Find the second largest element in the array? 
+3) Sort the array in the ascending order without using the Arrays.sort() method?
