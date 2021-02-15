@@ -1,0 +1,117 @@
+****************************************
+week2 day1 learnings:  
+****************************************
+
+selenium basics: 
+selenium is an automation tool used to interact with the web applications. 
+
+what is webdriver and why it is required? 
+*******************************************
+webdriver is mainly a mediator to the selenium and the browser, where it helps to interact to the web application in the browser based on the developed automation script
+using selenium. 
+
+selenium script ----------> webdriver (chrome/firefox/safari) -------> browser
+
+All the webdrivers are developed by the own browser owned company eg:
+
+Chrome Browser ---> chromedriver (developed by google) 
+Firefox Browser --> firefoxdriver (also known as gecko driver) 
+IE browser ---> IE driver (this is the only driver developed by selenium team on thier own where as it is bit challenging to automate the application in IE browsers
+where you will get lot of exceptions often)
+
+
+****************************************
+Dependencies required:  
+****************************************
+
+GroupID (package)	-> Jarfile		-> version#
+io.github.bonigarcia 	-> webdriver manager 	-> 4.1.0
+org.seleniumhq.selenium -> selenium-java 	-> 3.141.59
+commons-io 		-> commons-io 		-> 2.8.0
+
+what is WebDriverManager? 
+WebDriverManager is the one which helps to manage your webdriver according to the browser version by following the below syntax: 
+
+WebDriverManager.chromedriver().setup();
+//WebDriverManager.firefoxdriver().setup();
+
+ChromeDriver driver 	= new ChromeDriver();
+//FirefoxDriver driver 	= new FirefoxDriver();
+
+If WebDriverManager is not used then we have to download the respective the chrome driver version according to the browser version and we have to set the path of it as like below:
+System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+ChromeDriver driver 	= new ChromeDriver();
+
+
+****************************************
+Document Object Model:
+****************************************
+
+To interact with the webelements in selenium, you should inspect the web page or click F12 and check on the dom for the attributes & tag name for it. 
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+
+In the above dom webelement line, 
+
+1) <input> is the tag-name
+2) class,type,id,name and size are the attributes of the webelement
+
+If you have the webelement dom as like this : <label for="username">Username</label>
+
+3) Username is the text value of the webelement
+
+In selenium, we have the below locators which helps to identify the respective webelement on the page: 
+1) id
+2) name
+3) classname
+4) linktext (it has tag name with <a>) 
+5) partiallinktext (it has tag name with <a>) 
+6) XPath
+7) css selector
+8) tagname
+
+//Syntax for some of the locators to find the element in the page: 
+driver.findElementById("idofthewebelement");
+driver.findElementByName("nameofthewebelement");
+
+****************************************
+Classroom session: 
+****************************************
+1) Open the chrome browser and maximize the window
+2) Launch the leaftaps application url 
+3) Apply the implicit wait for 20 seconds in the code
+4) Enter the username and password
+5) Click on the login button 
+6) Once logged in, click on the crmsfa link in the page
+7) Click on the leads tab
+8) Click on the create lead link in the page
+9) Enter the firstname,lastname and company name (mandatory values) in the page
+10) Click on create lead button
+11) Close the browser
+
+****************************************
+Important notes in locators: 
+****************************************
+1) If Id is having a number, it is better to refrain from using the numbers
+2) If class name is having the spaces between it, we shouldn't suppose to use the classname to inspect the webelement
+3) If name is duplicate, better to use xpath instead of name
+4) If the tagname is <a>, then its always preferable to use link text than any other locators
+
+
+****************************************
+Select class in selenium:
+****************************************
+
+Select obj = new Select(WebElement); 
+
+obj.selectByIndex(int index);
+obj.selectByVisibleText(String text);
+obj.selectByValue(String value);
+
+****************************************
+Classroom session: 
+****************************************
+
+In the create lead page dropdowns,
+1) Select ownership as "patnership" 
+2) Select first value from the marketing campaign dropdown (Affliate sites) 
