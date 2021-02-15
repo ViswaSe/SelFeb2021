@@ -1,0 +1,149 @@
+****************************************
+week2 day2 learnings:  
+****************************************
+
+Few important methods exists in selenium: 
+
+1) getLocation(); -> helps to get the location of the webelement
+	Point point = driver.findElementById("").getLocation();
+	int x= point.getX(); int y = point.getY();
+
+2) getCssValue(String propertyname); -> helps to get the style value of the webelement.
+	String backgroundColor=driver.findElementById("").getCssValue("background-color");
+	//It will be in RGA color pattern
+
+3) getSize(); -> helps to identify the height and width of the webelement.
+
+	Dimension dimension = driver.findElementById("").getSize();
+	int height=dimension.getHeight();
+	int width= dimension.getWidth();
+
+4) getPageSource(); -> helps to get the entire page source of the dom which helps for verification. 
+
+5) getText(); -> helps to get the text value of the respective webelement in the page
+
+6) getAttribute(String attribute) -> this helps to get the value present in the attribute of the webelement
+
+you can pass the value to the webelement and click on tab as like below: driver.findElementById("").sendKeys("Vishveshwar",Keys.TAB);
+
+
+****************************************
+Dropdown advanced learnings: 
+****************************************
+
+1) to get all the options from the dropdown using the below method: 
+
+	List<WebElement> allOptions = dd.getOptions();
+	int size=allOptions.size(); --> you can validate the size of the list
+
+2) you can verify the already selected text in the dropdown using the below method: 
+	
+	WebElement ddSelected=dd.getFirstSelectedOption();
+	String text=ddSelected.getText();
+
+****************************************
+xpath learnings:
+****************************************
+
+Two types of XPath: 
+1) absolute based xpath
+	** starts from root node in the dom 
+	** it is not mainly used as it takes lot of time to write the xpath
+	** in future if the dom got changed, the xpath will get failed and we have to construct again. 
+
+2) relative based xpath: 
+
+	2.1) Basic relative xpath
+	2.2) Advanced relative xpath.
+
+2.1) Basic relative xpath:
+
+Attribute based relative xpath: 
+****************************************
+	//tagname[@attributename='attributevalue']
+	eg. //input[@id='username']
+
+Multiple attribute based relative xpath: 
+****************************************
+	//tagname[@attributename='value'][@attributename='value']
+			(or)
+	//tagname[@attributename='value' and @attributename='value']
+
+eg.
+//input[@id='username'][@name='USERNAME']
+//input[@id='username' and @name='USERNAME']
+
+Text based relative xpath: 
+****************************************
+	//tagname[text()='value']
+
+	eg. //h2[text()='Leaftaps Login']
+
+Partial Attribute based relative xpath: 
+****************************************
+	//tagname[contains(@attributename,'partial-attributevalue')]
+
+	eg.//input[contains(@name,'USER')]
+
+
+Partial Multiple Attribute based relative xpath: 
+*************************************************
+	//tagname[contains(@attributename,'partialattributevalue') and contains(@attributename,'partialattributevalue')]
+
+	eg.//input[contains(@id,'username') and contains(@name,'USER')]
+
+
+Partial Text based relative xpath: 
+****************************************
+	//tagname[contains(text(),'partial-textvalue')]
+
+	eg.//h2[contains(text(),'Leaftaps')]
+
+Collection based relative xpath: 
+****************************************
+	(//tagname[@attribute='value'])[index]
+	eg. (//input[@id='username'])[2] -> This will take the 2nd inspection of matching to this xpath value. In xpath the index starts from the value 1. 
+
+2.2) Advanced relative xpath:
+
+Parent to child
+****************************************
+parentxpath/childxpath
+eg: 	//form[@id='login']/p[1]
+
+Child to parent
+****************************************
+childxpath/parent::tagname of the parent (or) childxpath/..
+eg: //input[@id='username']/parent::p[1] (or) //input[@id='username']/..
+
+Grandparent to Grandchild
+****************************************
+grandparentxpath//grandchildxpath
+eg: (//form[@id='login']//label)[2] 
+
+GrandChild to Grandparent
+****************************************
+grandchildxpath/ancestor::tagname of the grandparent
+eg: //input[@id='username']/ancestor::form
+
+Elder sibling to younger sibling
+****************************************
+eldersiblingxpath/following-sibling::tagname of the youngersibling
+eg: //label[text()='Username']/following-sibling::input[1]
+
+Younger sibling to elder sibling
+****************************************
+youngersiblingxpath/preceding-sibling::tagname of the elder sibling
+eg: //input[@id='username']/preceding::label
+
+Elder cousin to younger cousin
+****************************************
+eldercousinxpath/following::youngercousinxpath (This will travel completely based on the index passing in the youngercousin) 
+eg: //label[text()='Username']/following::input[2]
+
+Younger cousin to elder cousin 
+****************************************
+youngercousinxpath/preceding::eldercousinxpath (here it will automatically travel to the super elder cousin without using any index)
+eg: //input[@id='password']/preceding::label
+
+
