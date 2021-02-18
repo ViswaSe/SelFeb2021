@@ -2,7 +2,7 @@ package week1.day2;
 
 import java.util.Scanner;
 
-public class ArmstrongOrNot {
+public class ArmstrongNumberInForLoop {
 
 	public static void main(String args[])
 	{
@@ -23,14 +23,14 @@ public class ArmstrongOrNot {
 		}
 		
 		input=result;
-		
-		while(input>0)
+	
+		for(int i=0;i<count;i++)
 		{
 			eachDigit=input%10;
 			input=input/10;
-			sum=(int) (sum+Math.pow(eachDigit, count));			
+			sum=(int) (sum+Math.pow(eachDigit, count));		
 		}
-		
+	
 		System.out.println(sum);
 		
 		if(sum==result)
