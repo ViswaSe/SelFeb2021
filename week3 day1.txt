@@ -1,0 +1,105 @@
+****************************************
+week3 day1 learnings:  
+****************************************
+
+Inheritance:
+****************************************
+
+1) Single Inheritance 		: one class extends another class is called single inheritance
+2) Multilevel Inheritance 	: child class extends a parent class and another sub class extends the child class is called multilevel inheritance
+
+eg. 
+class B extends A  // B is the child class and A is the parent class
+{	
+}
+
+
+class C extends B // Multilevel inheritance achieved, where C is a child of B class 
+{
+}
+
+3) Multiple Inheritance 	: a class extends more than one class is called multiple inheritance in java. Java doesn't support multiple inheritance at class level. 
+we can use multiple inheritance only at interfaces. 
+
+class C extends A,B  //syntax of multiple inheritance
+{
+}
+
+Access specifiers in Java: 
+****************************************
+
+public 		=> Global level access (access using the objects and extends from the same package or from different packages) 
+protected	=> Resticted to outside the package by creating the object (Access using the objects,extends from same package and only in extends for outside the package)
+default		=> Completely restricted outside the package both objects & extends (Access only within the packages through objects, extends) 
+private		=> No where you can access apart from the particular class. (only you can access within the class with the help of object) 
+
+
+Polymorphism in Java: (many forms)
+****************************************
+
+1) Method overloading
+2) Method overriding
+
+Method overloading: 
+****************************************
+In the same class, we have different methods with different number of arguments or datatype of arguments with the same method name for all the methods is known as 
+method overloading in java. 
+
+classname 	: same
+methodname 	: same
+args		: differ (either in number or type or order) 
+
+args should differ in atleast type of arguments, number of arguments or order of arguments between the methods. 
+
+Method overriding: 
+****************************************
+In the IS-A relationship classes (i.e) the child class should extend the parent class, any child class method follows the same signature of parent class method
+then it is known as method overriding in java. 
+
+classname	: differ
+methodname	: same
+args		: same  
+
+method signature should be same for both the methods in java.
+
+Constructor in java: 
+****************************************
+why constructor? -> constructor is mainly used to assign the values to the class variables and call the methods which has to be invoked at first. 
+1) Default constructor 		: If we doesn't create any constructor, JVM compiler will automatically create the default constructor. 
+2) Parameter constructor	: If the constructor is having the parameters then it will be a parameterized constructor.
+
+we can even overload the constructors in java. 
+If you have a child class constructor and you're calling the child class constructor, automatically it will internally calls your parent class constructor with the help
+of super();
+
+constructor vs method:
+****************************************
+1) constructor is called when we instantiate the object || method should be called from the main method via object
+2) No return type for constructor || method may have any return type either void/primitive datatype/even a class
+3) Constructor will call implicitly whenever we a create an object for the class || method should be called explicitly
+4) constructor is mainly used to intiate the values to the class variables or to execute the method at first || method is mainly used to perform some actions
+5) constructor can be overloaded but not overriden || method can be either overload or overriden 
+6) If you didn't create any constructor java will automatically create the default constructor || method will not be created by any compiler in java
+
+
+this keyword in java: 
+****************************************
+this keyword used to access the class level constructors and to differentiate the class level variables to local variables in java. 
+this is mainly used to represent the class level data members. 
+
+this() 			-> helps to call the default constructor of the class
+this.variablename; 	-> helps to use the particular class variable based on the var.name.
+
+static in java: 
+****************************************
+static is the keyword in java, which is mainly used to assign the values to the variable and making the variable as constant around all the objects.
+usually variables will be stored in the heap memory in JVM,but if you declared static then it will be stored in the classarea, so that you can use the latest value around multiple objects.
+
+static int a=5;
+
+static methods: 
+you can call static method without creating an object for the class, if you're calling from different class you have to call it as classname.methodName();
+
+
+
+
