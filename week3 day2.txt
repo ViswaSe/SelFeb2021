@@ -1,0 +1,162 @@
+****************************************
+week3 day2 learnings:  
+****************************************
+
+Abstraction in java: 
+****************************************
+we can achieve abstraction through 2 ways in java: 
+1) Interface - 100% abstraction 
+2) Abstract class - partial abstraction 
+
+1) Interfaces in java: 
+****************************************
+1) Interfaces are used to declare the abstract methods for wide usage around the classes. 
+2) We can't create object for the interfaces in java where as reference will be created in it. 
+3) Interfaces are used to declare only abstract methods in java (i.e) we shouldn't implement the methods inside the interfaces
+4) All the methods inside the interfaces are public abstract by default and all the variables inside the interfaces are public static final by default (constant variables)
+5) we can achieve the multiple inheritance in java via interfaces
+
+interface extends anotherinterfaces
+
+class implements interface/interfaces.
+
+you should define/implement all the interface methods in the class once the class implements the interfaces
+
+we can create the reference for the interface as like below: 
+Interface reference = new ClassName(); //This is known as scope restricted to the interface methods 
+
+Interface access specifiers : public, default are only allowed
+Interface methods access specifiers : public & default (by default all the methods inside the interfaces are abstract) 
+Interface variables access specifiers : public & default (by default all the variables inside the interfaces are public static) 
+
+
+In realtime why we need interfaces? eg. 
+****************************************
+suppose consider 
+
+ChromeDriver - developed by Google
+FirefoxDriver - developed by mozila
+SafariDriver - developed by Apple
+EdgeDriver - developed by IE  and if they have different different methods as per thier convinence to launch the browsers it will get failed.
+
+so WebDriver is the interface devleoped by selenium and it has the common methods and all the common methods has been implemented in all the above mentioned classes. 
+
+ChromeDriver implements WebDriver
+FirefoxDriver implements WebDriver
+SafariDriver implements WebDriver 
+EdgeDriver implements WebDriver 
+
+RemoteWebDriver is the super class of all the driver classes. (Chrome,Firefox,Edge & Safari) 
+
+so we can describe it as 
+
+RemoteWebDriver driver = new ChromeDriver();
+In future, if you want to change the execution in different browser you can simply change it as 
+RemoteWebDriver driver = new FirefoxDriver();
+
+
+This is the actual real time benefits of using interfaces and maintaining the scope restriction in java. 
+********************************************************************************************************************
+
+2) Abstract class in java: 
+****************************************
+1) Abstract class is the class which is mainly used for partial abstraction in java. 
+2) we can't create object for abstract class also same as like interfaces.
+3) we can implement only partial methods from the interfaces if we implemented the interfaces in the abstract class
+4) we should have abstract keyword in the abstract class
+5) abstract method variables are not static/constant as like interface variables
+6) we can even have implemented methods inside the abstract class in java.
+
+interface1-> 2 methods
+interface2 extends interface1 -> 3 methods in interface2 
+abstract class implements interface2 -> its a user choice to implement/unimplement any methods from the interface2
+
+if class implements interface2 -> all the 5 methods has to be implemented without any other options. 
+
+This is the partial implementation in java via abstract class. 
+
+Collections in java: 
+****************************************
+why collection in java? 
+-> collection is used in java mainly for overcoming the limitations in array. 
+
+Limitations in array: 
+****************************************
+1) Array have fixed size (limitiation size) and it can't be changed during the runtime.
+2) Array can allow to store the elements in the same data type at a time
+
+Collection is dynanmic storage and it can allow any datatype as the values stored in the collections are objects. 
+
+2 types of collections: 
+****************************************
+1) List - List is a interface which has 2 implementation classes : ArrayList and LinkedList
+2) Set - Set is also an interface which has 3 implementation classes : HashSet,LinkedHashSet & Treeset
+
+Features of List: 
+****************************************
+- List maintains the insertion order 
+- List will allow duplicate values
+- List is the interface and array list is the implementation class in java. 
+- The main difference betweeen array list and linked list is to increase the performance. If you want to add or remove the value you can use linked list, if you want
+to get the values from the list you can use array list for higher performance. 
+
+Features of Set: 
+****************************************
+- Set may or may not follows insertion order (i.e) Linked hash set follows insertion order, HashSet follows random order and Treeset follows ascending order in a set.
+- Set doesn't accept duplicate values. 
+
+Methods in List & Set:  
+****************************************
+add(object) 
+addAll(collection)
+get(int index)
+remove(int index)
+remove(String object)
+removeAll(collection) 
+size() 
+
+Apart from get(int index), all other methods are available in set interfaces as well. 
+
+We have some special methods in collections to sort the elements in ascending & desceding order: 
+Collections.sort(list);
+Collections.reverse(list);
+
+classroom sessions:   
+****************************************
+1) Remove Duplicate characters from the given word using collections
+2) Sorting the given array in descending order via collection methods 
+
+
+**************************************** 
+String class in java: 
+****************************************
+String is the class in java which helps to store the values and perform multiple actions with the inbuild methods available in it. 
+
+2 ways to declare the string in java: 
+****************************************
+1) String literals: 
+
+String s1 = "Welcome";
+String s2 = "Welcome"; This string literal will store the string value in the string constant pool in jvm, so if the value is already stored it will refer to 
+			the same memory where as it will not save the value again inside the constant pool. so if you verify the memory of s1 & s2 here it will be true. 
+
+System.out.println(s1==s2) ; //true
+
+2) String object: 
+String s3 = new String("Welcome"); This will store the welcome value in the heap memory by creating the object for string class and if you verify the s1 & s3 memory 
+					allocation both will be different so it will say false. 
+
+System.out.println(s1==s3); //false
+
+String methods in java: 
+***************************
+equals()
+equalsIgnoreCase()
+toCharArray()
+charAt(int index)
+length()
+replace(character ch,character newch)
+replace(String s,String news)
+substring(int beginindex)
+substring(int beginindex,int endindex) // here end index is exclusive & begin index is inclusive which means it will take it until endindex-1;
+split(regex);
