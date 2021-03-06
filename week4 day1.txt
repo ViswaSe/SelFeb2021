@@ -1,0 +1,74 @@
+****************************************
+week4 day1 learnings:  
+****************************************
+findElements: 
+******************
+findelements helps to find all the elements in the webpage. 
+It returns a List<WebElement> in the webpage.
+
+
+List<WebElement> allLinks  = driver.findElementsByLinkText("//a"); This will take all the links in the page.
+Sysout(allLinks.size());
+
+
+WebTable: 
+******************
+Table structure be like: 
+<table>
+	<tr> 
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+
+Actions class in selenium:
+****************************************
+1) clickAndHold()
+2) release()
+3) contextClick()
+4) doubleClick()
+5) keyDown(Keys.CONTROL)
+6) keyUp(Keys.CONTROL)
+7) moveToElement(ele)
+8) moveToOffset(int xoffSet,int yoffset)
+9) dragAndDrop(webelement ele1,WebElement ele2)
+10) dragAndDropBy(WebElement ele,int xaxis, int yaxis)
+
+Actions builder = new Actions(driver);
+builder.moveToElement(ele).perform();
+
+Actions is the class which helps to interact with the webelement for advanced user interactions. 
+It will not throw any exception even though there is a fail in our script and also action methods will be used only if you use perform() at the end of the action class.
+
+Waits in Selenium:
+****************************************
+1) implicit wait  - It will be used mainly for findElement and findElements on the webpage. 
+
+driver.manage().timeouts().implicitWait(30,TimeUnit.SECONDS); //It will be wait for 30 seconds until the element is finded on the webpage, if the element will be found
+				before the 30seconds it will go and execute the next set of code as it will not wait for the entire timeunit.  
+
+2) explicit wait  - We will discuss this by tomorrow. 
+
+****************************************
+Selenium Internals
+****************************************
+until 4.0, selenium used the Json wire protocol as an intermediate 
+
+Selenium--> Java-> Json wire protocol --> ChromeDriver ---> Chrome Browser
+
+Now, we have 
+
+Selenium--> Java--> W3C protocol --> ChromeDriver --> ChromeBrowser
+
+
+There is an internal api calls going on from selenium script to chromedriver which helps to interact with the chromedriver and then chrome driver is interacting with the
+chrome browsers
+
+Refer to the below URL for API calls: 
+****************************************
+https://www.w3.org/TR/webdriver/
+
+For Change log : refer to https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/cpp/iedriverserver/CHANGELOG
