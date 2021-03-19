@@ -4,7 +4,7 @@ public class LargestValueOfArray {
 	
 	public static void main(String args[])
 	{
-		int[] arr= {173,29,320,41,103,1130,547};
+		int[] arr= {100,20,300,40,50,60,70};
 		
 		int largestNo = 0;
 		int temp=0;
@@ -21,7 +21,12 @@ public class LargestValueOfArray {
 			temp=largestNo;
 		}
 		
-		System.out.println(largestNo);
+		if(temp==0)
+		{
+			temp=arr[arr.length-1];
+		}
+		
+		System.out.println(temp);
 	}
 
 }
