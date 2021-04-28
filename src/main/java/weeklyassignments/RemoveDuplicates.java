@@ -1,4 +1,4 @@
-package pages;
+package weeklyassignments;
 
 public class RemoveDuplicates {
 	
