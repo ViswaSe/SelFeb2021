@@ -1,6 +1,6 @@
 package assignments;
 
-public class SwapZero {
+public class SwapZeroInArray {
 	
 	public static void main(String args[]) {
 		
