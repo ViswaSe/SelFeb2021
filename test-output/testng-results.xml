@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="433" started-at="2021-05-31T13:56:45Z" finished-at="2021-05-31T13:56:46Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="433" started-at="2021-05-31T13:56:45Z" finished-at="2021-05-31T13:56:46Z">
+      <class name="weeklyassignments.ReadingExcel">
+        <test-method status="PASS" signature="getExcelValue(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:weeklyassignments.ReadingExcel@5cb137]" name="getExcelValue" duration-ms="6" started-at="2021-05-31T13:56:46Z" data-provider="getData" finished-at="2021-05-31T13:56:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ownhouse]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[rental house]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelValue -->
+        <test-method status="PASS" signature="getExcelValue(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:weeklyassignments.ReadingExcel@5cb137]" name="getExcelValue" duration-ms="1" started-at="2021-05-31T13:56:46Z" data-provider="getData" finished-at="2021-05-31T13:56:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jayakrishna]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jay@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelValue -->
+        <test-method status="PASS" signature="getExcelValue(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:weeklyassignments.ReadingExcel@5cb137]" name="getExcelValue" duration-ms="1" started-at="2021-05-31T13:56:46Z" data-provider="getData" finished-at="2021-05-31T13:56:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vishveshwar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vichu@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelValue -->
+      </class> <!-- weeklyassignments.ReadingExcel -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
