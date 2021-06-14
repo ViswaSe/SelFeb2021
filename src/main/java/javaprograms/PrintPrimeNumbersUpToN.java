@@ -21,15 +21,15 @@ public class PrintPrimeNumbersUpToN {
 			
 			else
 			{
-				for(int j=2;j<i;j++)
+				for(int j=2;j<i;j++) //i=3,j=2 2<3    i=3,j=3 3<3  || 2 times loop iterated
 				{
-					if(i%j==0)
+					if(i%j==0) 
 					{
 						flag = false;
 						break;
 					}
 					else 
-						flag = true;
+						flag = true; //true 
 				}
 				
 			}
