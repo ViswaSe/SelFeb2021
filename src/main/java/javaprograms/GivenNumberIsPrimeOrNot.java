@@ -32,6 +32,8 @@ public class GivenNumberIsPrimeOrNot {
 		{
 			System.out.println("Given number: "+n+" is not a prime number");
 		}
+		
+		obj.close();
 	}
 
 }

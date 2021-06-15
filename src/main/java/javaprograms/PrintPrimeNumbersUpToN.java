@@ -39,5 +39,7 @@ public class PrintPrimeNumbersUpToN {
 				System.out.println(i);
 			}
 		}
+		
+		obj.close();
 	}
 }
