@@ -1,11 +1,17 @@
 package javaprograms;
 
+import java.util.Scanner;
+
 public class Anagram {
 	
 	public static void main(String args[])
 	{
-		String s  = "Madam";
-		String s1 = "damMa";
+		Scanner obj = new Scanner(System.in);
+		
+		System.out.println("Enter 2 strings to find out whether it is anagram or not:");
+		
+		String s  = obj.next();
+		String s1 = obj.next();
 		
 		String s2=s1;
 		
@@ -37,7 +43,7 @@ public class Anagram {
 			System.out.println("Given words are not anagram");
 		}
 		
-		
+		obj.close();
 		
 	}
 
