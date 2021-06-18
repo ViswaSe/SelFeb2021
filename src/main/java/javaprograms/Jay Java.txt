@@ -1,0 +1,65 @@
+Java Programs:
+
+https://java2blog.com/java-interview-programs/
+
+***************************
+Day1: 
+***************************
+1.Write a program to find the given number is Prime Number or not in Java
+2.Print the prime numbers until the given input. Suppose my input is 100, it should print the prime numbers until 100.
+
+***************************
+Day2:
+***************************
+1.Write a java program to reverse the given string.
+For example: 
+If input is 'abcde' output should be 'edcba'
+
+2.Write a java program to find whether the given string is palindrome or not? 
+
+For example:
+input1: madam	| output1: madam is a palindrome
+input2: harish	| output2: harish is not a palindrome.
+
+
+***************************
+Day3:
+***************************
+
+1.Write a java program to find the first non repeating character of the given string. 
+
+For example:
+If input string is “analogy”,  then program should return ‘n’
+If input string is “easiest”, then program should return ‘a
+
+
+***************************
+Day4:
+***************************
+1.Write a java program to find the number of times each of the characters repeated in the given string. It has been solved both using map and without using map concept. 
+
+For example:
+1.If input is "vishveshwar", then the output should be like: 
+v-2,i-1,s-2,h-2,e-1,w-1,a-1,r-1 
+
+2.If input is "jayakrishna", then the output should be like: 
+j-1,a-3,y-1,k-1,i-1,s-1,h-1,n-1
+
+
+***************************
+Day5:
+***************************
+1.Write a Java program to check whether the given two strings are anagram or not?
+
+For example:  
+1) 
+Input1 : abcde, 
+Input2 : ecadb 
+
+Output: the given strings are anagram.
+
+2)
+Input1 : jay,
+Input2 : vichu
+
+output: the given strings are not an anagram. 
