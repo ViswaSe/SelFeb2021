@@ -12,7 +12,7 @@ public class CountOfCharacters {
 		int count=1;
 		String s1="";
 		
-		for(int i=0;i<s.length()-1;i++)
+		for(int i=0;i<s.length();i++)
 		{
 			for(int j=i+1;j<s.length();j++)
 			{
@@ -32,11 +32,6 @@ public class CountOfCharacters {
 			
 			count=1;
 			s1=s1+s.charAt(i);
-		}
-		
-		if(s1.indexOf(s.charAt(s.length()-1))==-1)
-		{
-			System.out.println(s.charAt(s.length()-1)+"-"+count);
 		}
 		
 		obj.close();
