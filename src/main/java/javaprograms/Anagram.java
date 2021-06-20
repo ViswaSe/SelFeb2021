@@ -24,6 +24,7 @@ public class Anagram {
 					if(s2.contains(Character.toString(s.charAt(i))))
 					{
 						s2=s2.replaceFirst(""+s.charAt(i), "");
+						break;
 					}
 				}
 			}
